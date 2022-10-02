@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+}
+
+@font-face {
+    font-family: 'MaSuperPolice';
+    src: url('MaSuperPolice.eot');
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+
+.header_precedent {
+    position: absolute;
+    left: 10px;
+    display: flex;
+}
+
+.header_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.header_logo img {
+    width: 50%;
+}
+
+.accueil_presentation_localisation {
+    width: 100%;
+    background-color: #eaeaea;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.accueil_presentation_localisation i {
+    color: #353535;
+}
+
+.accueil_presentation_localisation input {
+    background: none;
+    border: none;
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+    max-width: 40%;
+    color: #353535;
+}
+
+.accueil_presentation_explorer {
+    width: 100%;
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.accueil_presentation_explorer h1 {
+    text-align: center;
+    padding: 40px 60px 10px 60px;
+    font-weight: bold;
+}
+
+.accueil_presentation_explorer h2 {
+    text-align: center;
+    font-size: large;
+    padding: 0 30px 20px 30px;
+    color: #353535;
+}
+
+.accueil_presentation_explorer input {
+    text-align: center;
+    font-size: large;
+    padding: 15px 20px 15px 20px;
+    margin: 10px 0 60px 0;
+    border-radius: 30px;
+    background: linear-gradient(to bottom, #FF79DA , #9356DC);
+    border: none;
+    color: white;
+    box-shadow: 0px 5px 10px #d1d1d1;
+}
+
+.accueil_fonctionnement {
+    padding: 50px 0 50px 0;
+}
+
+.accueil_fonctionnement h1 {
+    margin: 0 0 10px 20px;
+}
+
+.accueil_fonctionnement_zone {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.accueil_fonctionnement_zone h3 {
+    height: 25px;
+    width: 25px;
+    margin: 25px 20px 25px 20px;
+    z-index: 2;
+    background-color: #9356dc;
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accueil_fonctionnement_zone i {
+    height: 25px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #7e7e7e;
+}
+
+.accueil_fonctionnement_zone p {
+    position: absolute;
+    background-color: #f6f6f6;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 33px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding-left: 70px;
+    width: calc(100% - 123px);
+    box-shadow: 0px 5px 10px #d1d1d1;
+
+}
+
+.accueil_restaurants {
+    display: flex;
+    flex-direction: column;
+    background-color: #f6f6f6;
+    font-weight: bold;
+    padding-bottom: 70px;
+}
+
+.accueil_restaurants h1 {
+    margin: 40px 20px 0 20px;
+}
+
+.accueil_restaurants_zone {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.accueil_restaurants_zone_card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 20px 20px 0 20px;
+    border-radius: 15px;
+    width: 100%;
+    box-shadow: 0px 5px 10px #d1d1d1;
+}
+
+.accueil_restaurants_zone_card_image {
+    position: relative;
+    display: flex;
+}
+
+.accueil_restaurants_zone_card_image a {
+    width: 100%;
+}
+
+.accueil_restaurants_zone_card_image img {
+    width: 100%;
+    height: 150px;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+}
+
+.accueil_restaurants_zone_card_image p {
+    position: absolute;
+    top: 15px;
+    left: calc(100% - 100px);
+    background-color: #99E2D0;
+    color: #269e80;
+    padding: 5px 10px 5px 10px;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+.accueil_restaurants_zone_card_texte {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 10px 0 10px 0;
+}
+
+.accueil_restaurants_zone_card_texte_texte {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.accueil_restaurants_zone_card_texte_texte h2 {
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.accueil_restaurants_zone_card_texte_texte p {
+    margin-left: 20px;
+}
+
+.accueil_restaurants_zone_card_texte_picto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+
+.accueil_restaurants_zone_card_texte_picto i {
+    padding: 5px 10px 5px 10px;
+    border-radius: 2px;
+    font-weight: bold;
+    background:-webkit-linear-gradient(bottom, #FF79DA , #9356DC);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;}
+
+.footer {
+    background-color: #353535;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.footer h1 {
+    margin-bottom: 20px;
+    color: white;
+    font-family: Shrikhand;
+    font-size: large;
+}
+
+.footer a {
+    margin: 3px 0 3px 0;
+    color: white;
+    font-size: large;
+}
+
+.footer i {
+    width: 25px;
+}
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
