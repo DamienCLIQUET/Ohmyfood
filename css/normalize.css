@@ -1,13 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap");
 * {
   margin: 0;
   padding: 0;
-  font-family: Roboto;
+  font-family: "Roboto";
 }
 
-@font-face {
-  font-family: "MaSuperPolice";
-  src: url("MaSuperPolice.eot");
+.btn {
+  text-align: center;
+  font-size: large;
+  padding: 15px 20px 15px 20px;
+  margin: 10px 0 60px 0;
+  border-radius: 30px;
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  border: none;
+  color: white;
+  box-shadow: 0px 5px 10px #d1d1d1;
 }
+
 .header {
   display: flex;
   align-items: center;
@@ -26,7 +35,6 @@
   justify-content: center;
   width: 100%;
 }
-
 .header_logo img {
   width: 50%;
 }
@@ -40,11 +48,9 @@
   justify-content: center;
   align-items: center;
 }
-
 .accueil_presentation_localisation i {
   color: #353535;
 }
-
 .accueil_presentation_localisation input {
   background: none;
   border: none;
@@ -62,13 +68,11 @@
   flex-direction: column;
   align-items: center;
 }
-
 .accueil_presentation_explorer h1 {
   text-align: center;
   padding: 40px 60px 10px 60px;
   font-weight: bold;
 }
-
 .accueil_presentation_explorer h2 {
   text-align: center;
   font-size: large;
@@ -76,22 +80,9 @@
   color: #353535;
 }
 
-.accueil_presentation_explorer input {
-  text-align: center;
-  font-size: large;
-  padding: 15px 20px 15px 20px;
-  margin: 10px 0 60px 0;
-  border-radius: 30px;
-  background: linear-gradient(to bottom, #FF79DA, #9356DC);
-  border: none;
-  color: white;
-  box-shadow: 0px 5px 10px #d1d1d1;
-}
-
 .accueil_fonctionnement {
   padding: 50px 0 50px 0;
 }
-
 .accueil_fonctionnement h1 {
   margin: 0 0 10px 20px;
 }
@@ -102,8 +93,10 @@
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
+  /*p:hover, i:hover ~ p, h3:hover ~ p {
+      background-color: #9256dc80;
+  }*/
 }
-
 .accueil_fonctionnement_zone h3 {
   height: 25px;
   width: 25px;
@@ -116,7 +109,6 @@
   justify-content: center;
   align-items: center;
 }
-
 .accueil_fonctionnement_zone i {
   height: 25px;
   z-index: 2;
@@ -125,7 +117,6 @@
   align-items: center;
   color: #7e7e7e;
 }
-
 .accueil_fonctionnement_zone p {
   position: absolute;
   background-color: #f6f6f6;
@@ -139,6 +130,9 @@
   width: calc(100% - 123px);
   box-shadow: 0px 5px 10px #d1d1d1;
 }
+.accueil_fonctionnement_zone i:hover, .accueil_fonctionnement_zone p:hover ~ i, .accueil_fonctionnement_zone h3:hover ~ i {
+  color: red;
+}
 
 .accueil_restaurants {
   display: flex;
@@ -147,7 +141,6 @@
   font-weight: bold;
   padding-bottom: 70px;
 }
-
 .accueil_restaurants h1 {
   margin: 40px 20px 0 20px;
 }
@@ -171,18 +164,15 @@
   position: relative;
   display: flex;
 }
-
 .accueil_restaurants_zone_card_image a {
   width: 100%;
 }
-
 .accueil_restaurants_zone_card_image img {
   width: 100%;
   height: 150px;
   border-radius: 15px 15px 0 0;
   object-fit: cover;
 }
-
 .accueil_restaurants_zone_card_image p {
   position: absolute;
   top: 15px;
@@ -208,12 +198,10 @@
   flex-direction: column;
   width: 80%;
 }
-
 .accueil_restaurants_zone_card_texte_texte h2 {
   margin-left: 20px;
   font-weight: bold;
 }
-
 .accueil_restaurants_zone_card_texte_texte p {
   margin-left: 20px;
 }
@@ -225,8 +213,7 @@
   align-items: center;
   width: 20%;
 }
-
-.accueil_restaurants_zone_card_texte_picto i {
+.accueil_restaurants_zone_card_texte_picto i:hover {
   padding: 5px 10px 5px 10px;
   border-radius: 2px;
   font-weight: bold;
@@ -242,22 +229,109 @@
   flex-direction: column;
   padding: 25px;
 }
-
 .footer h1 {
   margin-bottom: 20px;
   color: white;
   font-family: Shrikhand;
   font-size: large;
 }
-
 .footer a {
   margin: 3px 0 3px 0;
   color: white;
   font-size: large;
 }
-
 .footer i {
   width: 25px;
+}
+
+.accueil_menu {
+  border-radius: 40px 40px 0 0;
+  background-color: lightgray;
+  transform: translateY(-50px);
+}
+.accueil_menu h2 {
+  margin-left: 15px;
+  text-transform: uppercase;
+  font-size: large;
+}
+.accueil_menu_titre {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px 15px 15px;
+}
+.accueil_menu_titre h1 {
+  font-family: "Shrikhand";
+}
+
+.accueil_menu_ligne {
+  width: 50px;
+  height: 5px;
+  background-color: #99E2D0;
+  margin: 0 0 15px 15px;
+}
+
+.accueil_menu_plat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 15px;
+  margin: 7px 10px 7px 10px;
+}
+.accueil_menu_plat_texte {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 40px);
+  margin: 10px;
+}
+.accueil_menu_plat_texte h3 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.accueil_menu_plat_texte div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.accueil_menu_plat_texte_detail {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  /*max-width: calc(100% - 50px);*/
+}
+.accueil_menu_plat_texte_tarif {
+  margin: 0 0 0 5px;
+  /*max-width: calc(100% - 50px);*/
+}
+.accueil_menu_plat_coeur {
+  display: flex;
+  width: 0px;
+  height: 60px;
+  border-radius: 0 15px 15px 0;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+}
+.accueil_menu_plat_coeur i {
+  color: white;
+  transform: rotate(360deg);
+  scale: 0;
+}
+.accueil_menu_plat:hover .accueil_menu_plat_texte {
+  width: calc(100% - 100px);
+  transition: width 500ms ease-in-out;
+}
+.accueil_menu_plat:hover .accueil_menu_plat_coeur {
+  width: 60px;
+  transition: width 500ms ease-in-out;
+}
+.accueil_menu_plat:hover .accueil_menu_plat_coeur i {
+  scale: 1;
+  transform: rotate(0deg);
+  transition: transform 500ms 50ms, scale 10ms 150ms;
 }
 
 /*# sourceMappingURL=normalize.css.map */
