@@ -9,7 +9,7 @@
   text-align: center;
   font-size: large;
   padding: 15px 20px 15px 20px;
-  margin: 10px 0 60px 0;
+  margin: 10px 0 0 0;
   border-radius: 30px;
   background: linear-gradient(to bottom, #FF79DA, #9356DC);
   border: none;
@@ -35,6 +35,7 @@
 }
 .header_logo img {
   width: 50%;
+  max-width: 300px;
 }
 .header a {
   text-decoration: none;
@@ -67,6 +68,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 50px;
 }
 .accueil_presentation_explorer h1 {
   text-align: center;
@@ -81,8 +83,12 @@
 }
 .accueil_fonctionnement {
   padding: 50px 0 50px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
-.accueil_fonctionnement h1 {
+.accueil_fonctionnement h2 {
   margin: 0 0 10px 20px;
 }
 .accueil_fonctionnement_zone {
@@ -118,18 +124,18 @@
   padding-top: 20px;
   padding-bottom: 20px;
   margin-left: 33px;
-  border-radius: 15px;
+  border-radius: 15px 0 0 15px;
   display: flex;
   align-items: center;
   padding-left: 70px;
-  width: calc(100% - 123px);
+  width: calc(30% - 123px);
   box-shadow: 0px 5px 10px #d1d1d1;
 }
 .accueil_fonctionnement_zone i:hover, .accueil_fonctionnement_zone p:hover ~ i, .accueil_fonctionnement_zone h3:hover ~ i {
   color: #9356dc;
 }
 .accueil_fonctionnement_zone p:hover, .accueil_fonctionnement_zone i:hover ~ p, .accueil_fonctionnement_zone h3:hover ~ p {
-  background-color: rgba(146, 86, 220, 0.5019607843);
+  background-color: rgba(147, 86, 220, 0.5019607843);
 }
 .accueil_restaurants {
   display: flex;
@@ -138,7 +144,7 @@
   font-weight: bold;
   padding-bottom: 70px;
 }
-.accueil_restaurants h1 {
+.accueil_restaurants h2 {
   margin: 40px 20px 0 20px;
 }
 .accueil_restaurants_zone {
@@ -151,7 +157,7 @@
   background-color: white;
   margin: 20px 20px 0 20px;
   border-radius: 15px;
-  width: 100%;
+  width: calc(25% - 40px);
   box-shadow: 0px 5px 10px #d1d1d1;
 }
 .accueil_restaurants_zone_card_image {
@@ -190,7 +196,7 @@
   flex-direction: column;
   width: 80%;
 }
-.accueil_restaurants_zone_card_texte_texte h2 {
+.accueil_restaurants_zone_card_texte_texte h3 {
   margin-left: 20px;
   font-weight: bold;
 }
@@ -230,14 +236,26 @@
   margin: 3px 0 3px 0;
   color: white;
   font-size: large;
+  text-decoration: none;
 }
 .footer i {
   width: 25px;
 }
 
+.main {
+  background-color: #f6f6f6;
+}
+.main_presentation {
+  max-height: 40vh;
+  display: flex;
+}
+.main_presentation img {
+  width: 100%;
+  object-fit: cover;
+}
 .main_menu {
   border-radius: 40px 40px 0 0;
-  background-color: lightgray;
+  background-color: #f6f6f6;
   transform: translateY(-50px);
 }
 .main_menu h2 {
@@ -248,12 +266,29 @@
 .main_menu_titre {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 30px 40px 15px 15px;
+  padding: 30px 0 0 15px;
 }
 .main_menu_titre h1 {
   font-family: "Shrikhand";
+}
+.main_menu_titre i {
+  margin: 0 30px;
+}
+.main_menu_zone {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.main_menu_zone_cards {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  width: 25%;
+}
+.main_menu_zone_cards h2 {
+  margin-top: 30px;
 }
 .main_menu_ligne {
   width: 50px;
@@ -268,6 +303,7 @@
   background-color: white;
   border-radius: 15px;
   margin: 7px 10px 7px 10px;
+  box-shadow: 0px 5px 10px #d1d1d1;
 }
 .main_menu_plat_texte {
   display: flex;
@@ -389,6 +425,41 @@
   100% {
     transform: translate3d(0, 0, 0) opacity(0);
     opacity: 1;
+  }
+}
+@media screen and (max-width: 992px) {
+  .accueil_fonctionnement {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .accueil_fonctionnement_zone p {
+    width: calc(100% - 123px);
+    border-radius: 15px;
+  }
+  .accueil_restaurants_zone_card {
+    width: calc(50% - 40px);
+  }
+  .main_presentation {
+    max-height: 30vh;
+    display: flex;
+  }
+  .main_menu_zone_cards {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .accueil_restaurants_zone_card {
+    width: 100%;
+  }
+  .main_presentation {
+    max-height: 100vh;
+    display: flex;
+  }
+  .main_menu_titre {
+    justify-content: space-between;
+  }
+  .main_menu_zone_cards {
+    width: 100%;
   }
 }
 
