@@ -324,11 +324,9 @@
                     text-overflow: ellipsis;
                     overflow: hidden;
                     white-space: nowrap;
-                    /*max-width: calc(100% - 50px);*/
                 }
                 &_tarif {
                     margin: 0 0 0 5px;
-                    /*max-width: calc(100% - 50px);*/
                 }
             }
             &_coeur {
@@ -370,7 +368,6 @@
     transform: translate3d(0, 0, 0);
     opacity: 1;
     z-index: 2;
-    //animation-iteration-count: infinite;
 }
   
 @keyframes slide {
@@ -389,7 +386,6 @@
     transform: translate3d(0, 0, 0);
     opacity: 1;
     z-index: 2;
-    //animation-iteration-count: infinite;
 }
   
 @keyframes slide2 {
@@ -408,7 +404,6 @@
     transform: translate3d(0, 0, 0);
     opacity: 1;
     z-index: 2;
-    //animation-iteration-count: infinite;
 }
   
 @keyframes slide3 {
@@ -427,7 +422,6 @@
     transform: translate3d(0, 0, 0);
     opacity: 1;
     z-index: 2;
-    //animation-iteration-count: infinite;
 }
   
 @keyframes slide4 {
@@ -438,6 +432,169 @@
     100% {
         transform: translate3d(0, 0, 0) opacity(0);
         opacity: 1;
+    }
+}
+
+.chargement {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left :0;
+    width: 100vw;
+    height : 100vh;
+    background-color: #ffffffea;
+    visibility: hidden;
+    transition: visibility 4000ms;
+    & p {
+        font-size: xx-large;
+        font-weight: bold;
+        color: #000000;
+        font-family: Shrikhand;
+    }
+    & div {
+        display: flex;
+    }
+    &:active {
+        display: flex;
+        visibility: visible;
+    }
+    &_1, &_2, &_3, &_4, &_5, &_6, &_7, &_8, &_9, &_10 {
+        transform: translate3d(0, 0, 0);
+    }
+    &_1 {
+        animation: chargement_1 3000ms ease-in-out;
+        animation-iteration-count: infinite;
+    }
+    &_2 {
+        animation: chargement_2 3000ms ease-in-out;
+        animation-iteration-count: infinite;
+    }
+    &_3 {
+        animation: chargement_3 3000ms ease-in-out;
+        animation-iteration-count: infinite;
+    }
+    &_4 {
+        animation: chargement_4 3000ms ease-in-out;
+        animation-iteration-count: infinite;
+    }
+    &_5 {
+        animation: chargement_5 3000ms ease-in-out;
+        animation-iteration-count: infinite;
+    }
+    &_6 {
+        animation: chargement_6 3000ms ease-in-out;
+        animation-iteration-count: infinite;
+    }
+    &_7 {
+        animation: chargement_7 3000ms ease-in-out;
+        animation-iteration-count: infinite;
+    }
+    &_8 {
+        animation: chargement_8 3000ms ease-in-out;
+        animation-iteration-count: infinite;
+    }
+    &_9 {
+        animation: chargement_9 3000ms ease-in-out;
+        animation-iteration-count: infinite;
+    }
+    &_10 {
+        animation: chargement_10 3000ms ease-in-out;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes chargement_1 {
+    0%, 28% {
+        transform: translate3d(0, 0, 0);
+    }
+    14% {
+        transform: translate3d(0, -10px, 0);
+    }
+}
+
+@keyframes chargement_2 {
+    8%, 36% {
+        transform: translate3d(0, 0, 0);
+    }
+    22% {
+        transform: translate3d(0, -10px, 0);
+    }
+}
+
+@keyframes chargement_3 {
+    16%, 44% {
+        transform: translate3d(0, 0, 0);
+    }
+    30% {
+        transform: translate3d(0, -10px, 0);
+    }
+}
+
+@keyframes chargement_4 {
+    24%, 52% {
+        transform: translate3d(0, 0, 0);
+    }
+    38% {
+        transform: translate3d(0, -10px, 0);
+    }
+}
+
+@keyframes chargement_5 {
+    32%, 60% {
+        transform: translate3d(0, 0, 0);
+    }
+    46% {
+        transform: translate3d(0, -10px, 0);
+    }
+}
+
+@keyframes chargement_6 {
+    40%, 68% {
+        transform: translate3d(0, 0, 0);
+    }
+    54% {
+        transform: translate3d(0, -10px, 0);
+    }
+}
+
+@keyframes chargement_7 {
+    48%, 76% {
+        transform: translate3d(0, 0, 0);
+    }
+    62% {
+        transform: translate3d(0, -10px, 0);
+    }
+}
+
+@keyframes chargement_8 {
+    56%, 84% {
+        transform: translate3d(0, 0, 0);
+    }
+    70% {
+        transform: translate3d(0, -10px, 0);
+    }
+}
+
+@keyframes chargement_9 {
+    64%, 92% {
+        transform: translate3d(0, 0, 0);
+    }
+    78% {
+        transform: translate3d(0, -10px, 0);
+    }
+}
+
+@keyframes chargement_10 {
+    72%, 100% {
+        transform: translate3d(0, 0, 0);
+    }
+    86% {
+        transform: translate3d(0, -10px, 0);
     }
 }
 
