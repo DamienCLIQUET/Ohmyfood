@@ -16,6 +16,10 @@
   color: white;
   box-shadow: 0px 5px 10px #d1d1d1;
 }
+.btn:hover {
+  opacity: 0.7;
+  box-shadow: 0px 5px 10px #535353;
+}
 
 .header {
   display: flex;
@@ -26,6 +30,7 @@
   position: absolute;
   left: 10px;
   display: flex;
+  color: black;
 }
 .header_logo {
   display: flex;
@@ -210,14 +215,74 @@
   align-items: center;
   width: 20%;
 }
-.accueil_restaurants_zone_card_texte_picto i:hover {
-  padding: 5px 10px 5px 10px;
-  border-radius: 2px;
-  font-weight: bold;
+.accueil_restaurants_zone_card_texte_picto_couleur {
   background: -webkit-linear-gradient(bottom, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
+  font-weight: bold !important;
+  position: absolute;
   color: transparent;
+  z-index: 1;
+}
+.accueil_restaurants_zone_card_texte_picto_anim {
+  position: absolute;
+  z-index: 2;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+}
+.accueil_restaurants_zone_card_texte_picto_bordure {
+  background: black;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  position: absolute;
+  z-index: 3;
+}
+
+.animation1, .animation2, .animation3, .animation4 {
+  height: 16px;
+  width: 16px;
+}
+
+.animation1:hover .anim1 {
+  height: 0px;
+  transition: height 1.5s ease-in-out;
+}
+.animation1:hover .bordure1 {
+  opacity: 0;
+  transition-property: opacity;
+  transition-delay: 1.2s;
+}
+
+.animation2:hover .anim2 {
+  height: 0px;
+  transition: height 1.5s ease-in-out;
+}
+.animation2:hover .bordure2 {
+  opacity: 0;
+  transition-property: opacity;
+  transition-delay: 1.2s;
+}
+
+.animation3:hover .anim3 {
+  height: 0px;
+  transition: height 1.5s ease-in-out;
+}
+.animation3:hover .bordure3 {
+  opacity: 0;
+  transition-property: opacity;
+  transition-delay: 1.2s;
+}
+
+.animation4:hover .anim4 {
+  height: 0px;
+  transition: height 1.5s ease-in-out;
+}
+.animation4:hover .bordure4 {
+  opacity: 0;
+  transition-property: opacity;
+  transition-delay: 1.2s;
 }
 
 .footer {
@@ -438,8 +503,9 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(255, 255, 255, 0.9176470588);
-  visibility: hidden;
-  transition: visibility 4000ms;
+  opacity: 0;
+  scale: 0;
+  animation: chargement 4000ms;
 }
 .chargement p {
   font-size: xx-large;
@@ -449,10 +515,6 @@
 }
 .chargement div {
   display: flex;
-}
-.chargement:active {
-  display: flex;
-  visibility: visible;
 }
 .chargement_1, .chargement_2, .chargement_3, .chargement_4, .chargement_5, .chargement_6, .chargement_7, .chargement_8, .chargement_9, .chargement_10 {
   transform: translate3d(0, 0, 0);
@@ -498,6 +560,16 @@
   animation-iteration-count: infinite;
 }
 
+@keyframes chargement {
+  0%, 99% {
+    opacity: 1;
+    scale: 1;
+  }
+  100% {
+    opacity: 0;
+    scale: 0;
+  }
+}
 @keyframes chargement_1 {
   0%, 28% {
     transform: translate3d(0, 0, 0);
