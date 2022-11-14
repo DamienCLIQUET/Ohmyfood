@@ -346,8 +346,36 @@
             h1 {
                 font-family: 'Shrikhand';
             }
-            i {
-                margin: 0 30px;
+            &_picto {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 0 20px;
+                &_couleur {
+                    background: -webkit-linear-gradient(bottom, #FF79DA , #9356DC);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    font-weight: bold !important;
+                    position: absolute;
+                    color: transparent;
+                    z-index: 1;
+                }
+                &_anim {
+                    position: absolute;
+                    z-index: 2;
+                    width: 16px;
+                    height: 16px;
+                    background-color: #f6f6f6;
+                }
+                &_bordure {
+                    background: black;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    position: absolute;
+                    z-index: 3;
+                }
             }
         }
         &_zone {
@@ -357,7 +385,7 @@
             &_cards {
                 display: flex;
                 flex-direction: column;
-                flex-wrap: no-wrap;
+                flex-wrap: nowrap;
                 width: 25%;
                 h2 {
                     margin-top: 30px;
@@ -412,8 +440,7 @@
                 background-color: #99E2D0;
                 i {
                     color: white;
-                    transform: rotate(360deg);
-                    scale: 0;
+                    transform: rotate(360deg) scale(0);
                 }
             }
             &:hover {
@@ -426,8 +453,7 @@
                     transition: width 500ms ease-in-out;
                 }
                 .main_menu_plat_coeur i {
-                    scale: 1;
-                    transform: rotate(0deg);
+                    transform: rotate(0deg) scale(1);
                     transition: transform 500ms 50ms, scale 10ms 150ms;
                 }
             }
@@ -449,7 +475,7 @@
         opacity: 0;
     }
     40% {
-        transform: translate3d(0, 0, 0) opacity(0);
+        transform: translate3d(0, 0, 0) opacity;
         opacity: 1;
     }
 }
@@ -467,7 +493,7 @@
         opacity: 0;
     }
     60% {
-        transform: translate3d(0, 0, 0) opacity(0);
+        transform: translate3d(0, 0, 0) opacity;
         opacity: 1;
     }
 }
@@ -485,7 +511,7 @@
         opacity: 0;
     }
     80% {
-        transform: translate3d(0, 0, 0) opacity(0);
+        transform: translate3d(0, 0, 0) opacity;
         opacity: 1;
     }
 }
@@ -503,7 +529,7 @@
         opacity: 0;
     }
     100% {
-        transform: translate3d(0, 0, 0) opacity(0);
+        transform: translate3d(0, 0, 0) opacity;
         opacity: 1;
     }
 }

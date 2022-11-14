@@ -338,8 +338,36 @@
 .main_menu_titre h1 {
   font-family: "Shrikhand";
 }
-.main_menu_titre i {
-  margin: 0 30px;
+.main_menu_titre_picto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+}
+.main_menu_titre_picto_couleur {
+  background: -webkit-linear-gradient(bottom, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-weight: bold !important;
+  position: absolute;
+  color: transparent;
+  z-index: 1;
+}
+.main_menu_titre_picto_anim {
+  position: absolute;
+  z-index: 2;
+  width: 16px;
+  height: 16px;
+  background-color: #f6f6f6;
+}
+.main_menu_titre_picto_bordure {
+  background: black;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  position: absolute;
+  z-index: 3;
 }
 .main_menu_zone {
   display: flex;
@@ -349,7 +377,7 @@
 .main_menu_zone_cards {
   display: flex;
   flex-direction: column;
-  flex-wrap: no-wrap;
+  flex-wrap: nowrap;
   width: 25%;
 }
 .main_menu_zone_cards h2 {
@@ -405,8 +433,7 @@
 }
 .main_menu_plat_coeur i {
   color: white;
-  transform: rotate(360deg);
-  scale: 0;
+  transform: rotate(360deg) scale(0);
 }
 .main_menu_plat:hover .main_menu_plat_texte {
   width: calc(100% - 80px);
@@ -417,8 +444,7 @@
   transition: width 500ms ease-in-out;
 }
 .main_menu_plat:hover .main_menu_plat_coeur i {
-  scale: 1;
-  transform: rotate(0deg);
+  transform: rotate(0deg) scale(1);
   transition: transform 500ms 50ms, scale 10ms 150ms;
 }
 
@@ -435,7 +461,7 @@
     opacity: 0;
   }
   40% {
-    transform: translate3d(0, 0, 0) opacity(0);
+    transform: translate3d(0, 0, 0) opacity;
     opacity: 1;
   }
 }
@@ -452,7 +478,7 @@
     opacity: 0;
   }
   60% {
-    transform: translate3d(0, 0, 0) opacity(0);
+    transform: translate3d(0, 0, 0) opacity;
     opacity: 1;
   }
 }
@@ -469,7 +495,7 @@
     opacity: 0;
   }
   80% {
-    transform: translate3d(0, 0, 0) opacity(0);
+    transform: translate3d(0, 0, 0) opacity;
     opacity: 1;
   }
 }
@@ -486,7 +512,7 @@
     opacity: 0;
   }
   100% {
-    transform: translate3d(0, 0, 0) opacity(0);
+    transform: translate3d(0, 0, 0) opacity;
     opacity: 1;
   }
 }
