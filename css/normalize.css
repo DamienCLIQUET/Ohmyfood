@@ -447,6 +447,9 @@
   transform: rotate(0deg) scale(1);
   transition: transform 500ms 50ms, scale 10ms 150ms;
 }
+.main_menu_button {
+  text-align: center;
+}
 
 .slide {
   animation: slide 2s ease-in-out;
